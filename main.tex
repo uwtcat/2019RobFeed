@@ -1,0 +1,86 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage[english]{babel}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{appendix}
+\usepackage[backend=biber,natbib=true,doi=true]{biblatex}
+\usepackage{multirow}
+\usepackage{xassoccnt}
+\usepackage{blindtext}
+\usepackage{setspace}
+\usepackage{longtable}
+\renewcommand{\baselinestretch}{1.6} 
+
+\pagestyle{fancy}
+
+
+\bibliography{references}
+
+
+\title{Your Title}
+\author{Your Name}
+\date{December 2018}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\tableofcontents
+\clearpage
+\section*{Abstract}
+{
+\setstretch{1.2}
+
+\normalsize
+\input{abstract.tex}
+}
+
+\clearpage
+\pagenumbering{arabic} 
+
+\section{Rules}
+Comment out this section for the proposal submission.
+\input{rules.tex}
+\section{Criteria}
+Comment out this section for the proposal submission.
+\input{criteria.tex}
+\section{Importance of Problem}
+\input{problem.tex}
+\section{Development Activities}
+Comment out if not a development proposal
+\input{development.tex}
+\section{Research Activities}
+Comment out if not a research proposal
+\input{research.tex}
+\section{Evaluation Plan}
+\input{evaluation.tex}
+\section{Staff}
+\input{staff.tex}
+\section{Resources}
+\input{resources.tex}
+\section{Workplan}
+\input{workplan.tex}
+
+\SuspendCounters{page}
+\renewcommand{\thepage}{}
+\begin{appendices}
+\section*{Data Management Plan}
+\input{data.tex}
+\section*{Human Subjects}
+\input{IRB.tex}
+\section*{Budget Narrative}
+\label{budget}
+\input{budget-justification.tex}
+\section*{Letters of Commitment from Key Participating Organizations and Agencies}
+\input{letters.tex}
+\end{appendices}
+
+\pagebreak
+\printbibliography
+
+
+\end{document}
